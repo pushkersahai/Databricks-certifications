@@ -217,6 +217,10 @@ display(purchases_df)
 
 # COMMAND ----------
 
+events_df.printSchema()
+
+# COMMAND ----------
+
 revenue_df = events_df.filter(col("ecommerce.purchase_revenue_in_usd").isNotNull())
 display(revenue_df)
 
